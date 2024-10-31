@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareInCrisis</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <header>
+        <section class="nav-container">
+            <div class="navbar">
+                <div class="nav-left">
+                    <button><a href="blog.html" target="_blank">Blog</a></button>
+                   <div class="logo"><img src="./assets/logo.png" alt="logo"></div>
+                    <h1>CareInCrisis</h1>
+                    
+                    
+                </div>
+
+                <div class="balance">
+                    <img src="./assets/coin.png" alt="Taka Symbol">
+                    <span id="balance">5500 BDT</span>
+                </div>
+            </div>
+
+           
+            
+        </section>
+        <div class="option">
+            <nav>
+                <ul>
+                    <li><button onclick="setActive(this)"><a href="#">Donation</a></button></li>
+                    <li><button id="history-btn" onclick="openHistory(); setActive(this);"><a href="#">History</a></button></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="donation-section">
+                <div class="donation-card">
+                    <img src="./assets/noakhali.png" alt="Flood at Noakhali">
+                    <div class="donation-info">
+                        <div class="donation-amount">
+                            <img src="./assets/coin.png" alt="Taka Symbol">
+                            <span class="amount" id="current-donation-amount-1">0 BDT</span>
+                        </div>
+                        <h2>Donate for Flood at Noakhali, Bangladesh</h2>
+                        <p>The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation will help provide essential supplies to those affected by this disaster.Try to aware everyone around you to donate for the people who are suck in the flood.Your 10 Taka will be much helful for them </p>
+                        <input type="number" placeholder="Write Donation Amount" id="donation-amount-1">
+                        <button class="donate-button" onclick="donate('Noakhali', 1)">Donate Now</button>
+                        <p id="error-message-1" class="error"></p>
+                    </div>
+                </div>
+
+                <div class="donation-card">
+                    <img src="./assets/feni.png" alt="Flood at Feni">
+                    <div class="donation-info">
+                        <div class="donation-amount">
+                            <img src="./assets/coin.png" alt="Taka Symbol">
+                            <span class="amount" id="current-donation-amount-2">600 BDT</span>
+                        </div>
+                        <h2>Donate for Flood Relief in Feni, Bangladesh</h2>
+                        <p>The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid.Most of the student have arranged a volunteering work to save the effected people of feni . India have open the barrage without any warning which caused this disaster.
+                        </p>
+                        <input type="number" placeholder="Write Donation Amount" id="donation-amount-2">
+                        <button class="donate-button" onclick="donate('Feni', 2)">Donate Now</button>
+                        <p id="error-message-2" class="error"></p>
+                    </div>
+                </div>
+
+                <div class="donation-card">
+                    <img src="./assets/quota-protest.png" alt="Aid for Injured in Quota Movement">
+                    <div class="donation-info">
+                        <div class="donation-amount">
+                            <img src="./assets/coin.png" alt="Taka Symbol">
+                            <span class="amount" id="current-donation-amount-3">2400 BDT</span>
+                        </div>
+                        <h2>Aid for Injured in the Quota Movement</h2>
+                        <p>Your donation supports individuals who were injured during the recent Quota movement protests. Contributions help provide necessary medical aid.More than 2000 student died and 50000 more are horrificly injured Police MF of bangladesh have killed all of the student intentionnally during the protest .</p>
+                        <input type="number" placeholder="Write Donation Amount" id="donation-amount-3">
+                        <button class="donate-button" onclick="donate('Quota', 3)">Donate Now</button>
+                        <p id="error-message-3" class="error"></p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="donation-total">
+                <h2>Total Donation:</h2>
+                <div class="donation-amount">
+                    <span class="amount" id="donation-total">0 BDT</span>
+                    <img src="./assets/coin.png" alt="Taka Symbol">
+                </div>
+            </section>
+        </div>
+
+        <!-- Confirmation Card
+        <div class="confirmation-card" id="confirmationCard">
+            <h1>Congrates!</h1>
+            <img src="./assets/coin.png" alt="Taka Symbol">
+            <p>You have Donated for Humankind</p>
+            <h2>Succesfully</h2>
+            <button onclick="closeConfirmationCard()">Close Confirmation</button>
+        </div> -->
+
+        <!-- Confirmation Card -->
+        <div class="confirmation-card" id="confirmationCard">
+            <h1>Congrats!</h1>
+            <img src="./assets/coin.png" alt="Taka Symbol">
+            <p>You have Donated for Humankind</p>
+            <h2>Successfully</h2>
+            <button onclick="closeConfirmationCard()">Close Confirmation</button>
+        </div>
+
+
+        
+
+        <!-- History Card -->
+        <div class="history-card" id="historyCard">
+            <h2>Donation History</h2>
+            <ul id="donation-history-list">
+             
+            </ul>
+            <button onclick="closeHistory()">Close History</button>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CareInCrisis. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
